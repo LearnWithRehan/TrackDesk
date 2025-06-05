@@ -1,0 +1,42 @@
+/* Sidebar container */
+/* Sidebar container */
+.custom-sidebar {
+  background-color: #fff !important;
+
+  /* Strong shadow only on the left side of right-fixed sidebar */
+  box-shadow: -6px 0 12px rgba(0, 0, 0, 0.70);
+
+  
+}
+
+
+/* Active nav item */
+.nav-link.active {
+  background-color: #05445e !important;
+  color: white !important;
+}
+
+/* Hover effect */
+.nav-link:hover {
+  background-color: #05445e !important;
+  color: white !important;
+}
+
+/* Make icons match text on hover/active */
+.nav-link i,
+.nav-link svg {
+  transition: color 0.2s;
+}
+
+.nav-link.active i,
+.nav-link.active svg,
+.nav-link:hover i,
+.nav-link:hover svg {
+  color: white !important;
+}
+
+/* Ensure text inside nav links turns white */
+.nav-link span,
+.nav-link strong {
+  color: inherit !important;
+}

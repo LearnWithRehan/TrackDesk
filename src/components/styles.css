@@ -1,0 +1,144 @@
+.time-sheet-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.time-sheet-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.entries-per-page {
+    display: flex;
+    align-items: center;
+}
+
+.select-entries {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+    min-width: 60px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-left: 5px;
+    min-width: 200px; /* Adjust as needed */
+}
+
+.time-sheet-table-wrapper {
+    overflow-x: auto; /* For responsive tables on smaller screens */
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+.time-sheet-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.time-sheet-table th,
+.time-sheet-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.time-sheet-table th {
+    background-color: #f8f8f8;
+    color: #666;
+    font-weight: normal;
+    text-transform: capitalize;
+    cursor: pointer;
+    user-select: none;
+    /* Apply padding here, or ensure .sortable-header handles it */
+}
+
+.sortable-header {
+    display: flex; /* Make the th a flex container */
+    align-items: center; /* Vertically center content */
+    justify-content: space-between; /* Push text to left, arrows to right */
+    color: #666; /* Adjust color to match image if desired */
+    /* Padding should typically be on the TH itself or its direct content.
+       If you apply it to the TH directly, you might not need it here. */
+}
+
+/* Grouping the arrows to act as a single unit visually */
+.sort-arrows {
+    display: flex; /* Make this a flex container */
+    flex-direction: column; /* Stack the arrows vertically */
+    margin-left: 8px; /* Space between text and the arrow block */
+    line-height: 1; /* Normalize line height */
+    height: 1em; /* Give a fixed height to the arrow container */
+    justify-content: center; /* Vertically center the arrows within their container */
+}
+
+.sort-arrow {
+    font-size: 0.7em; /* Make arrows slightly smaller */
+    color: #aaa; /* Lighter color for non-active arrows */
+    height: 0.5em; /* Give each arrow a bit of height to stack */
+    display: flex; /* For centering the individual arrow character if needed */
+    align-items: center;
+    justify-content: center;
+}
+
+/* .sort-arrow:first-of-type {
+    margin-top: -3px;
+}
+
+.sort-arrow:last-of-type {
+    margin-bottom: -3px;
+} */
+/* The above margin adjustments might not be necessary with the new .sort-arrows container */
+
+
+.no-data-message {
+    text-align: center;
+    padding: 50px;
+    color: #888;
+}
+
+.time-sheet-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.pagination-controls {
+    display: flex;
+    gap: 5px; /* Space between buttons */
+}
+
+.pagination-button {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    color: #555;
+    font-weight: bold;
+}
+
+.pagination-button:hover:not(.disabled) {
+    background-color: #f0f0f0;
+}
+
+.pagination-button.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
